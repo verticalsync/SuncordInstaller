@@ -1,0 +1,35 @@
+{
+  "RT_GROUP_ICON": {
+    "APP": {
+      "0000": [
+        "icon.png"
+      ]
+    }
+  },
+  "RT_MANIFEST": {
+    "#1": {
+      "0409": {
+        "description": "An Installer for the Suncord Discord Mod",
+        "minimum-os": "win10",
+        "execution-level": "as invoker",
+        "dpi-awareness": "system"
+      }
+    }
+  },
+  "RT_VERSION": {
+    "#1": {
+      "0000": {
+        "info": {
+          "0409": {
+            "Comments": "Comments",
+            "CompanyName": "Suncord",
+            "FileDescription": "Suncord Installer",
+            "LegalCopyright": "© 2024 verticalsync and Suncord Contributors - GPL3.0",
+            "ProductName": "Suncord Installer",
+            "ProductVersion": ""
+          }
+        }
+      }
+    }
+  }
+}
