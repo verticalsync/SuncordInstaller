@@ -42,8 +42,8 @@ jobs:
       - name: Build X11 Gui
         run: CGO_ENABLED=1 GOOS=linux GOARCH=amd64 go build -v -tags static -ldflags "-s -w -X 'suncordinstaller/buildinfo.InstallerGitHash=$(git rev-parse --short HEAD)' -X 'suncordinstaller/buildinfo.InstallerTag=${{ github.ref_name }}'" -o SuncordInstaller-x11
 
-      - name: Build Wayland Gui
-        run: CGO_ENABLED=1 GOOS=linux GOARCH=amd64 go build -v -tags "static wayland" -ldflags "-s -w -X 'suncordinstaller/buildinfo.InstallerGitHash=$(git rev-parse --short HEAD)' -X 'suncordinstaller/buildinfo.InstallerTag=${{ github.ref_name }}'" -o SuncordInstaller-wayland
+      # - name: Build Wayland Gui
+      #   run: CGO_ENABLED=1 GOOS=linux GOARCH=amd64 go build -v -tags "static wayland" -ldflags "-s -w -X 'suncordinstaller/buildinfo.InstallerGitHash=$(git rev-parse --short HEAD)' -X 'suncordinstaller/buildinfo.InstallerTag=${{ github.ref_name }}'" -o SuncordInstaller-wayland
 
       - name: Build Cli
         run: CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -v -tags "static cli" -ldflags "-s -w -X 'suncordinstaller/buildinfo.InstallerGitHash=$(git rev-parse --short HEAD)' -X 'suncordinstaller/buildinfo.InstallerTag=${{ github.ref_name }}'" -o SuncordInstallerCli-linux
@@ -58,8 +58,8 @@ jobs:
           name: SuncordInstaller-linux
           path: |
             SuncordInstaller-x11
-            SuncordInstaller-wayland
             SuncordInstallerCli-linux
+#            SuncordInstaller-wayland
 
 
   build-mac:
