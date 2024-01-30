@@ -2,10 +2,10 @@ package main
 
 import (
 	"fmt"
-	"github.com/fatih/color"
 	"os"
-	"slices"
 	"strings"
+
+	"github.com/fatih/color"
 )
 
 type Level = int
@@ -38,7 +38,7 @@ var Log Handler
 var LogLevel = LevelInfo
 
 func init() {
-	debug := slices.ContainsFunc(os.Args, func(s string) bool {
+	debug := SliceContainsFunc(os.Args, func(s string) bool {
 		return s == "-debug" || s == "--debug"
 	})
 
