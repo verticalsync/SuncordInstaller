@@ -199,6 +199,6 @@ jobs:
           prerelease: false
           draft: false
           files: |
-            linux/SuncordInstalleCli-linux
+            linux/SuncordInstallerCli-linux
             macos/SuncordInstaller.MacOS.zip
-            windows/SuncordInstalle*.exe
+            windows/SuncordInstaller*.exe
